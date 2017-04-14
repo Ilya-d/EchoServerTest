@@ -10,6 +10,7 @@ namespace TestEchoServer {
     public class ServerTest {
 
         public static void Main(string[] args) {
+            ThreadPool.SetMinThreads(100, 4);
             var portNumber = 7777;
             var server = new Server(portNumber);
 
